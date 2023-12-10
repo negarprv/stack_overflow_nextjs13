@@ -33,7 +33,7 @@ const NavContent = () => {
                 isActive
                   ? "primary-gradient rounded-lg text-light-900"
                   : "text-dark300_light900"
-              } flex items-center justify-start gap-4 bg-transparent p-4`}
+              } flex items-center justify-start gap-4 bg-transparent p-2.5`}
             >
               <Image
                 src={item.imgURL}
@@ -67,7 +67,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="background-light900_dark200 border-none"
+        className="background-light900_dark200 w-[266px] border-none"
       >
         <Link href="/" className=" flex items-center gap-1">
           <Image
@@ -81,7 +81,7 @@ const MobileNav = () => {
           </p>
         </Link>
 
-        <div>
+        <div className=" custom-scrollbar flex   flex-col  justify-between gap-24 overflow-y-auto">
           <SheetClose asChild>
             <NavContent />
           </SheetClose>
