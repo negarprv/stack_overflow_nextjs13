@@ -1,78 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer utilities {
   .background-light850_dark100 {
-    @apply bg-light-850 dark:bg-dark-100;
+    @apply bg-light-850 dark:bg-dark-100 transition-all duration-700;
   }
   .background-light900_dark200 {
-    @apply bg-light-900 dark:bg-dark-200;
+    @apply bg-light-900 dark:bg-dark-200 transition-all duration-700;
   }
   .background-light900_dark300 {
-    @apply bg-light-900 dark:bg-dark-300;
+    @apply bg-light-900 dark:bg-dark-300 transition-all duration-700;
   }
   .background-light800_darkgradient {
-    @apply bg-light-800 dark:dark-gradient;
+    @apply bg-light-800 dark:dark-gradient transition-all duration-700;
   }
   .background-light800_dark400 {
-    @apply bg-light-800 dark:bg-dark-400 !important;
+    @apply bg-light-800 dark:bg-dark-400 transition-all duration-700!important;
   }
   .background-light700_dark400 {
-    @apply bg-light-700 dark:bg-dark-400;
+    @apply bg-light-700 dark:bg-dark-400 transition-all duration-700;
   }
   .background-light700_dark300 {
-    @apply bg-light-700 dark:bg-dark-300;
+    @apply bg-light-700 dark:bg-dark-300 transition-all duration-700;
   }
   .background-light800_dark400 {
-    @apply bg-light-800 dark:bg-dark-400;
+    @apply bg-light-800 dark:bg-dark-400 transition-all duration-700;
   }
   .background-light800_dark300 {
-    @apply bg-light-800 dark:bg-dark-300 !important;
+    @apply bg-light-800 dark:bg-dark-300 transition-all duration-700 !important;
   }
   .text-dark100_light900 {
-    @apply text-dark-100 dark:text-light-900 !important;
+    @apply text-dark-100 dark:text-light-900  transition-all duration-700 !important;
   }
   .text-dark200_light900 {
-    @apply text-dark-200 dark:text-light-900;
+    @apply text-dark-200 dark:text-light-900  transition-all duration-700;
   }
   .text-dark200_light800 {
-    @apply text-dark-200 dark:text-light-800 !important;
+    @apply text-dark-200 dark:text-light-800  transition-all duration-700  !important;
   }
   .text-dark300_light700 {
-    @apply text-dark-300 dark:text-light-700;
+    @apply text-dark-300 dark:text-light-700 transition-all duration-700;
   }
   .text-dark400_light700 {
-    @apply text-dark-400 dark:text-light-700;
+    @apply text-dark-400 dark:text-light-700    transition-all duration-700;
   }
   .text-dark500_light700 {
-    @apply text-dark-500 dark:text-light-700 !important;
+    @apply text-dark-500 dark:text-light-700  transition-all duration-700 !important;
   }
   .text-dark500_light500 {
-    @apply text-dark-500 dark:text-light-500;
+    @apply text-dark-500 dark:text-light-500 transition-all duration-700;
   }
   .text-dark300_light900 {
-    @apply text-dark-300 dark:text-light-900 !important;
+    @apply text-dark-300 dark:text-light-900 transition-all duration-700  !important;
   }
   .text-dark400_light800 {
-    @apply text-dark-400 dark:text-light-800;
+    @apply text-dark-400 dark:text-light-800 transition-all duration-700;
   }
   .text-light400_light500 {
-    @apply text-light-400 dark:text-light-500 !important;
+    @apply text-light-400 dark:text-light-500 transition-all duration-700  !important;
   }
   .text-dark400_light500 {
-    @apply text-dark-400 dark:text-light-500;
+    @apply text-dark-400 dark:text-light-500  transition-all duration-700;
   }
   .text-dark400_light900 {
-    @apply text-dark-400 dark:text-light-900 !important;
+    @apply text-dark-400 dark:text-light-900  selection:transition-all duration-700 !important;
   }
   .text-light400_light500 {
-    @apply text-light-400 dark:text-light-500 !important;
+    @apply text-light-400 dark:text-light-500   transition-all duration-700 !important;
   }
   .light-border {
-    @apply border-light-800 dark:border-dark-300;
+    @apply border-light-800 dark:border-dark-300  transition-all duration-700;
   }
   .light-border-2 {
-    @apply border-light-700 dark:border-dark-400 !important;
+    @apply border-light-700 dark:border-dark-400   transition-all duration-700 !important;
   }
   .h1-bold {
     @apply text-[30px] font-bold leading-[42px] tracking-tighter;
@@ -132,7 +133,7 @@
     @apply text-[10px] font-normal leading-[13px];
   }
   .placeholder {
-    @apply placeholder:text-light-400 dark:placeholder:text-light-;
+    @apply placeholder:text-light-400 dark:placeholder:text-light-400;
   }
   .invert-colors {
     @apply invert dark:invert-0;

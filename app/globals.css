@@ -6,6 +6,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 @layer utilities {
+  .no-focus {
+    @apply focus-visible:ring-0  focus-visible:ring-transparent;
+  }
+
   .flex-center {
     @apply flex justify-center items-center;
   }
@@ -31,24 +35,8 @@ body {
     @apply max-w-full prose dark:prose-p:text-light-700 dark:pros;
   }
 
-  .primary-gradient {
-    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
-  }
-
-  .dark-gradient {
-    background: linear-gradient(
-      232deg,
-      rgba(23, 28, 35, 0.41) 0%,
-      rgba(19, 22, 28, 0.7) 100%
-    );
-  }
-
   .tab {
     @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-5;
-  }
-
-  .no-focus {
-    @apply focus-visible:ring-0 focus-visible:ring-transparent focus;
   }
 }
 
@@ -62,6 +50,18 @@ body {
     132deg,
     rgba(247, 249, 255, 0.5) 0%,
     rgba(229, 237, 255, 0.25) 100%
+  );
+}
+
+.primary-gradient {
+  background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
+}
+
+.dark-gradient {
+  background: linear-gradient(
+    232deg,
+    rgba(23, 28, 35, 0.41) 0%,
+    rgba(19, 22, 28, 0.7) 100%
   );
 }
 
