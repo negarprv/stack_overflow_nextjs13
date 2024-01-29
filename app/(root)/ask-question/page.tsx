@@ -1,7 +1,28 @@
+import Question from "@/components/forms/Question";
+import { getUserById } from "@/lib/actions/user.action";
+import { auth } from "@clerk/nextjs";
+import console from "console";
+import { redirect } from "next/navigation";
 import React from "react";
 
-const AskQuestions = () => {
-  return <div>Ask Questions</div>;
+const Page = async () => {
+  // const { userId } = auth();
+  const userId = "CL001";
+
+  if (!userId) redirect("/sign-in");
+
+  const monogoUser = await getUserById({ userId });
+
+  console.log(monogoUser);
+
+  return (
+    <div>
+      <h1 className=" h1-bold text-dark100_light900">Ask a Question</h1>
+      <div className=" mt-9">
+        <Question mongoUserId={JSON.stringify(monogoUser._id)} />
+      </div>
+    </div>
+  );
 };
 
-export default AskQuestions;
+export default Page;
