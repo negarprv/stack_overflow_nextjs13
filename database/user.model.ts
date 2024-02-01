@@ -1,5 +1,4 @@
 import { Schema, models, model, Document } from "mongoose";
-import { name } from "tailwindcss";
 
 export interface IUser extends Document {
   clerkId: string;
