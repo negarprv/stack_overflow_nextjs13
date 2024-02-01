@@ -30,6 +30,7 @@ export async function createUser(userData: CreateUserParams) {
     connectToDB();
 
     const newUser = await User.create(userData);
+    console.log("is connecting");
 
     return newUser;
   } catch (error) {
