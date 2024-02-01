@@ -8,7 +8,7 @@ import {
   UpdateUserParams,
 } from "./shared.types";
 import { revalidatePath } from "next/cache";
-// import Question from "@/database/question.model";
+import Question from "@/database/question.model";
 
 export async function getUserById(params: any) {
   try {
@@ -71,13 +71,15 @@ export async function deleteUser(params: DeleteUserParams) {
     // );
 
     // delete user Questions
-    // await Question.deleteMany({ author: user._id });
+    // @ts-ignore
+    await Question.deleteMany({ author: user._id });
 
     // TODO: delete user answers, comments, etc
 
-    // const deletedUser = await User.findByIdAndDelete(user._id);
+    // @ts-ignore
+    const deletedUser = await User.findByIdAndDelete(user._id);
 
-    // return deletedUser;
+    return deletedUser;
   } catch (error) {
     console.log(error);
     throw error;
