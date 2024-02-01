@@ -13,8 +13,6 @@ const Page = async () => {
 
   const monogoUser = await getUserById({ userId });
 
-  console.log(monogoUser);
-
   return (
     <div>
       <h1 className=" h1-bold text-dark100_light900">Ask a Question</h1>
