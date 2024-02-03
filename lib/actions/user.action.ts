@@ -29,7 +29,7 @@ export async function createUser(userData: CreateUserParams) {
   try {
     connectToDB();
 
-    const newUser = await User.create(userData);
+    const newUser = await User.create();
     console.log("is connecting");
 
     return newUser;
@@ -60,7 +60,7 @@ export async function deleteUser(params: DeleteUserParams) {
 
     const { clerkId } = params;
 
-    const user = User.findOne({ clerkId });
+    const user = User.findOneAndDelete({ clerkId });
 
     if (!user) {
       throw new Error("User not found");
