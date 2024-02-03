@@ -14,7 +14,6 @@ export default authMiddleware({
     "/collection",
   ],
   ignoredRoutes: [
-    "/api/webhooks(.*)",
     "/api/chatgpt",
     "/question/:id",
     "/tags",
