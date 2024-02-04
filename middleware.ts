@@ -12,19 +12,9 @@ export default authMiddleware({
     "/jobs",
     "/ask-question",
     "/collection",
+    "/api/hello",
   ],
-  ignoredRoutes: [
-    "/api/chatgpt",
-    "/question/:id",
-    "/tags",
-    "/tags/:id",
-    "/profile/:id",
-    "/community",
-    "/jobs",
-    "/profile",
-    "/ask-question",
-    "/collection",
-  ],
+  ignoredRoutes: ["/api/chatgpt"],
 });
 
 export const config = {
