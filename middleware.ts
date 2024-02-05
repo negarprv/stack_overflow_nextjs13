@@ -10,9 +10,6 @@ export default authMiddleware({
     "/profile/:id",
     "/community",
     "/jobs",
-    "/ask-question",
-    "/collection",
-    "/api/hello",
   ],
   ignoredRoutes: ["/api/chatgpt", "/api/webhook(.*)"],
 });

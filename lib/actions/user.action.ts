@@ -29,8 +29,7 @@ export async function createUser(userData: CreateUserParams) {
   try {
     connectToDB();
 
-    const newUser = await User.create();
-    console.log("is connecting");
+    const newUser = await User.create(userData);
 
     return newUser;
   } catch (error) {
@@ -54,13 +53,14 @@ export async function updateUser(params: UpdateUserParams) {
   }
 }
 
+// TODO: deleteUser is not working!! fix it as soon as possible
 export async function deleteUser(params: DeleteUserParams) {
   try {
     connectToDB();
 
     const { clerkId } = params;
 
-    const user = User.findOneAndDelete({ clerkId });
+    const user = User.findOne({ clerkId });
 
     if (!user) {
       throw new Error("User not found");
