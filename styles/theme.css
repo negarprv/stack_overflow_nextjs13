@@ -15,9 +15,7 @@
   .background-light800_darkgradient {
     @apply bg-light-800 dark:dark-gradient transition-all duration-700;
   }
-  .background-light800_dark400 {
-    @apply bg-light-800 dark:bg-dark-400 transition-all duration-700!important;
-  }
+
   .background-light700_dark400 {
     @apply bg-light-700 dark:bg-dark-400 transition-all duration-700;
   }
