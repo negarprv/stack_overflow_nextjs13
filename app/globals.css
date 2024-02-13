@@ -36,7 +36,10 @@ body {
   }
 
   .tab {
-    @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-5;
+    @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-500 hover:text-primary-500 hover:bg-primary-100;
+  }
+  .tab[data-state="active"] {
+    @apply text-primary-500 bg-primary-100;
   }
 
   .dark-gradient {
