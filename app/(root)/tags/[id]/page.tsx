@@ -10,7 +10,7 @@ import React from "react";
 const Page = async ({ params, searchParams }: URLProps) => {
   const result = await getQuestionsByTagID({
     tagId: params.id,
-    page: 1,
+    page: searchParams.page ? +searchParams.page : 1,
     searchQuery: searchParams.q,
   });
 
@@ -53,6 +53,13 @@ const Page = async ({ params, searchParams }: URLProps) => {
             linkTitle="Ask a Question"
           />
         )}
+      </div>
+
+      <div className=" mt-10">
+        <Pagination
+          isNext={result.isNext}
+          pageNumber={searchParams?.page ? +searchParams.page : 1}
+        />
       </div>
     </>
   );
