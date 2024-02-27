@@ -23,6 +23,7 @@ import Image from "next/image";
 import { createQuestion, editQuestion } from "@/lib/actions/question.action";
 import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from "@/context/ThemeProvider";
+import { toast } from "../ui/use-toast";
 
 interface Props {
   type?: string;
@@ -62,6 +63,10 @@ const Question = ({ mongoUserId, type, questionDetails }: Props) => {
         });
 
         router.push(`/question/${parsedQuestionDetails._id}`);
+
+        toast({
+          title: `Question edited`,
+        });
       } else {
         await createQuestion({
           title: values.title,
@@ -71,6 +76,10 @@ const Question = ({ mongoUserId, type, questionDetails }: Props) => {
           path: pathname,
         });
         router.push("/");
+
+        toast({
+          title: "Question created",
+        });
       }
     } catch (error) {
     } finally {
