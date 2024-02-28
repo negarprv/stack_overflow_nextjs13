@@ -320,6 +320,7 @@ export async function getRecommendedQuestion(params: RecommendedParams) {
       return tags;
     }, []);
 
+    // @ts-ignores
     const distinctTagIds = [...new Set(userTags.map((tag: any) => tag._id))];
 
     const query: FilterQuery<typeof Question> = {
