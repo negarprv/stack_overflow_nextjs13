@@ -1,6 +1,6 @@
 "use client";
 
-import { infer, z } from "zod";
+import { z } from "zod";
 import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -167,7 +167,6 @@ const Profile = ({ clerkId, user }: Props) => {
               </FormLabel>
               <FormControl>
                 <Textarea
-                  type="url"
                   className="no-focus paragraph-regular light-border-2 background-light800_dark300 text-dark300_light700 min-h-[56px] border"
                   placeholder="What's special about you?"
                   {...field}
