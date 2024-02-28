@@ -74,7 +74,7 @@ const QuestionCard = ({
           textStyle="body-medium text-dark400_light700"
         />
 
-        <div className=" flex items-center justify-between gap-10 ">
+        <div className=" flex items-center  gap-5 max-sm:flex-wrap max-sm:justify-start ">
           <Metric
             imgUrl="/assets/icons/like.svg"
             alt="upvotes"

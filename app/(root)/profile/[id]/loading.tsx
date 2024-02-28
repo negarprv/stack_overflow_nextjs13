@@ -4,14 +4,14 @@ import React from "react";
 const Loading = () => {
   return (
     <section>
-      <div className=" mb-10 flex h-36 w-full items-center gap-5 ">
+      <div className=" mb-10 flex h-36 w-full flex-wrap items-center gap-5 ">
         <Skeleton className=" h-36 w-36 rounded-full bg-gray-200" />
-        <Skeleton className="h-24 w-4/6 rounded-md bg-gray-200" />
+        <Skeleton className=" h-24 w-[450px] rounded-md bg-gray-200" />
         <Skeleton className=" h-10 w-32 self-start rounded-md bg-gray-200" />
       </div>
 
       <div className=" flex flex-col">
-        <Skeleton className="h-10 w-20 items-start  rounded-md bg-gray-200" />
+        <Skeleton className=" mt-10 h-10 w-20 items-start  rounded-md bg-gray-200" />
 
         <div className=" mt-5 grid grid-cols-1 gap-5 xs:grid-cols-2 md:grid-cols-4">
           <Skeleton className="h-28  rounded-md bg-gray-200" />
