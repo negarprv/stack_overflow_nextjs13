@@ -365,12 +365,3 @@ export async function getUserAnswers(params: GetUserStatsParams) {
     throw error;
   }
 }
-
-// export async function getAllUsers(params: GetAllUsersParams) {
-//   try {
-//     connectToDB();
-//   } catch (error) {
-//     console.log(error);
-//     throw error;
-//   }
-// }
