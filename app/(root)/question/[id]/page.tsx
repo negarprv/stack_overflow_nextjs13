@@ -110,7 +110,7 @@ const Page = async ({ params, searchParams }: URLProps) => {
         userId={mongoUser._id}
         totalAnswers={result.answers.length}
         filter={searchParams?.filter}
-        page={searchParams?.page}
+        page={searchParams?.page ? +searchParams?.page : 1}
       />
 
       <Answer
