@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SignedOut, useAuth } from "@clerk/nextjs";
 import { Button } from "../ui/button";
-import { start } from "repl";
 
 const LeftSidebar = () => {
   const pathname = usePathname();
